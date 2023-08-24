@@ -29,7 +29,9 @@ export default class Injector {
         return new EmployeeController(
             new EmployeeService(
                 new EmployeeRepository(
-                    Employee
+                    Employee, new ContactRepository(
+                        Contact
+                    )
                 ),
                 new UserRepository(
                     User

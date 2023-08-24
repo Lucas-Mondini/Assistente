@@ -12,19 +12,19 @@ export default abstract class CrudRepository implements ICrudRepository {
         this.model = model;
         this.relations = relations;
     }
-    create = async (data: any): Promise<Object> => {
+    async create (data: any): Promise<Object> {
         return await this.handleModel( async () => AppDataSource.getRepository(this.model).save(data));
     }
-    get = async (id: number): Promise<Object> => {
+    async get (id: number): Promise<Object> {
         return await this.handleModel( async () => AppDataSource.getRepository(this.model).findOneOrFail({where: {id: id}, relations: this.relations}));
     }
-    index = async (): Promise<Object> => {
+    async index (): Promise<Object> {
         return await this.handleModel( async () => {
             const model = await AppDataSource.getRepository(this.model).find({relations: this.relations});
             return model;
         })
     }
-    update = async (id:number, data: any): Promise<Object> => {
+    async update (id:number, data: any): Promise<Object> {
         return await this.handleModel(async () => {
             const model = await AppDataSource.getRepository(this.model).findOneOrFail({where: {id: id}, relations: this.relations});
             for (const [key, val] of Object.entries(data)) {
@@ -33,7 +33,7 @@ export default abstract class CrudRepository implements ICrudRepository {
             return await AppDataSource.getRepository(this.model).save(model);
         })
     }
-    destroy = async (id: number): Promise<Object> => {
+    async destroy (id: number): Promise<Object> {
         return await this.handleModel(async ()=> {
             const obj =  await AppDataSource.getRepository(this.model).findOneOrFail({where: {id: id}});
             const dead = await AppDataSource.getRepository(this.model).delete(obj.id);
@@ -52,7 +52,7 @@ export default abstract class CrudRepository implements ICrudRepository {
             return await callback();
         } catch (e: any) {
             Logger.log(e);
-            throw {"Repository error": e.detail}
+            throw {"Repository error": e}
         }
     }
 
