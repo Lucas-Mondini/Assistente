@@ -21,5 +21,10 @@ app.use(mainRouter);
 AppDataSource.initialize().then(()=> {
     app.listen(process.env.PORT, ()=> {
         console.log("iniciado na porta "+ process.env.PORT)
+        sandbox();
     });
 })
+
+function sandbox() {
+    
+}

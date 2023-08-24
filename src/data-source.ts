@@ -3,6 +3,8 @@ import { DataSource } from "typeorm"
 
 import 'dotenv/config';
 import User from './model/user';
+import Contact from './model/contact';
+import Employee from './model/employee';
 
 const host = process.env.DATABASE_HOST;
 const port = Number(process.env.DATABASE_PORT);
@@ -21,6 +23,8 @@ export const AppDataSource = new DataSource({
     logging:        false,
     entities: [
         User,
+        Contact,
+        Employee
     ],
     subscribers: [],
     migrations: [],

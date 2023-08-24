@@ -1,10 +1,7 @@
 import CrudController from "../crud";
 import IUserService from "../../services/user/interface";
 import IUserController from "./interface";
-import { UserData } from "../../shared/resources/UserData";
-import { Request, Response } from "express";
-import { ParamsDictionary } from "express-serve-static-core";
-import { ParsedQs } from "qs";
+import { Request} from "express";
 
 
 export default class UserController extends CrudController implements IUserController {
@@ -15,12 +12,11 @@ export default class UserController extends CrudController implements IUserContr
         return body.email && body.password && body.name;
     }
 
-    create = async (req: Request, res: Response): Promise<Object> => {
-        return super.create(req, res, () => { return this.validate(req.body)})
+    validateCreate(req: Request): boolean {
+        return this.validate(req.body)
     }
 
-    update = async (req: Request, res: Response): Promise<Object> => {
-        return super.update(req, res, () => { return this.validate(req.body)})
+    validateUpdate(req: Request): boolean {
+        return this.validate(req.body)
     }
-
 }

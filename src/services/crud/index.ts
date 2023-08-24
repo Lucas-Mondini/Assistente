@@ -1,4 +1,4 @@
-import ICrudRepository from "../../repositories/crud/interface";
+import ICrudRepository from "../../repositories/_crud/interface";
 import StatusData from "../../shared/resources/statusData";
 import ICrudService from "./interface";
 
@@ -37,7 +37,7 @@ export default class CrudService implements ICrudService {
         });
     }
 
-    private async HandleRepository(func: Function) : Promise<StatusData> {
+    protected async HandleRepository(func: Function) : Promise<StatusData> {
         try {
             const ret = await func()
             return {

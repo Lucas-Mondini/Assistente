@@ -1,5 +1,5 @@
 import { Column, Entity, PrimaryGeneratedColumn, Unique } from "typeorm";
-import Model from "../interface";
+import Model from "..";
 
 
 @Entity()
@@ -11,7 +11,8 @@ export default class User extends Model {
     email: string;
 
     @Column({
-        nullable: false
+        nullable: false,
+        select: false
     })
     password: string;
 
@@ -19,4 +20,11 @@ export default class User extends Model {
         nullable: false
     })
     name: string;
+
+    constructor(email: string = "", password: string = "", name: string = "") {
+        super();
+        this.email = email;
+        this.password = password;
+        this.name = name;
+    }
 }
