@@ -1,0 +1,12 @@
+{
+  "name": "generator",
+  "version": "1.0.0",
+  "description": "Framework code generator",
+  "main": "src/index.js",
+  "author": "Lucas",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.9"
+  },
+  "type": "module"
+}

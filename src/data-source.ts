@@ -5,6 +5,8 @@ import 'dotenv/config';
 import User from './model/user';
 import Contact from './model/contact';
 import Employee from './model/employee';
+import City from './model/location/city';
+import State from './model/location/state';
 
 const host = process.env.DATABASE_HOST;
 const port = Number(process.env.DATABASE_PORT);
@@ -24,7 +26,10 @@ export const AppDataSource = new DataSource({
     entities: [
         User,
         Contact,
-        Employee
+        Employee,
+
+        City,
+        State
     ],
     subscribers: [],
     migrations: [],

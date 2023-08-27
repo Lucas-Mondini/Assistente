@@ -3,6 +3,7 @@
 // import StudentRepository from "../repositories/students";
 // import UserService from "../services/user";
 
+import CrudController from "../controller/crud";
 import EmployeeController from "../controller/employee";
 import UserController from "../controller/user";
 import Contact from "../model/contact";
@@ -13,6 +14,8 @@ import EmployeeRepository from "../repositories/employee";
 import UserRepository from "../repositories/user";
 import EmployeeService from "../services/employee";
 import UserService from "../services/user";
+import CityInjector from "./crud/location/city";
+import StateInjector from "./crud/location/state";
 
 export default class Injector {
     public static User() : UserController {
@@ -38,5 +41,13 @@ export default class Injector {
                 )
             )
         )
+    }
+
+    public static State() : CrudController {
+        return new StateInjector().Inject();
+    }
+
+    public static City() : CrudController {
+        return new CityInjector().Inject();
     }
 }
