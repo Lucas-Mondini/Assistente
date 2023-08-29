@@ -1,0 +1,11 @@
+import CrudController from "../crud";
+import I<%=templateName%>Service from "../../services/<%=pathname%>/interface";
+import I<%=templateName%>Controller from "./interface";
+import { Request} from "express";
+
+
+export default class <%=templateName%>Controller extends CrudController implements I<%=templateName%>Controller {
+    constructor(service: I<%=templateName%>Service) {
+        super(service)
+    }
+}

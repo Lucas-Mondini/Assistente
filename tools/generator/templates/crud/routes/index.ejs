@@ -1,0 +1,9 @@
+import CrudRouter from "../crud";
+import I<%=templateName%>Controller from "../../controllers/<%=pathname%>/interface";
+
+
+export default class <%=templateName%>Router extends CrudRouter {
+    constructor(controller: I<%=templateName%>Controller) {
+        super(controller, "<%=templateName%>");
+    }
+}

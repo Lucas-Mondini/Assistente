@@ -1,0 +1,18 @@
+import CrudController from "../../../controllers/crud";
+import <%=templateName%>Controller from "../../../controllers/location/<%=pathname%>";
+import <%=templateName%> from "../../../models/location/<%=pathname%>";
+import <%=templateName%>Repository from "../../../repositories/location/<%=pathname%>";
+import <%=templateName%>Service from "../../../services/location/<%=pathname%>";
+import ICrudInjector from "../interface";
+
+export default class <%=templateName%>Injector implements ICrudInjector {
+    Inject(): <%=templateName%>Controller {
+        return new <%=templateName%>Controller(
+            new <%=templateName%>Service(
+                new <%=templateName%>Repository(
+                    <%=templateName%>
+                )
+            )
+        )
+    }
+}

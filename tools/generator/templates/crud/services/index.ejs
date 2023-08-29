@@ -1,0 +1,12 @@
+import CrudService from "../crud";
+import I<%=templateName%>Service from "./interface";
+import I<%=templateName%>Repository from "../../repositories/<%=pathname%>/interface";
+import StatusData from "../../shared/resources/statusData";
+import bcrypt from "bcrypt";
+
+
+export default class <%=templateName%>Service extends CrudService implements I<%=templateName%>Service {
+    constructor(<%=pathname%>Repository: I<%=templateName%>Repository) {
+        super(<%=pathname%>Repository);
+    }
+}
