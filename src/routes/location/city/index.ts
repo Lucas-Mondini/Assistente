@@ -1,4 +1,4 @@
-import ICityController from "../../../controller/location/city/interface";
+import ICityController from "../../../controllers/location/city/interface";
 import CrudRouter from "../../crud";
 
 export default class CityRouter extends CrudRouter {

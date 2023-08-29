@@ -2,11 +2,11 @@ import 'reflect-metadata'
 import { DataSource } from "typeorm"
 
 import 'dotenv/config';
-import User from './model/user';
-import Contact from './model/contact';
-import Employee from './model/employee';
-import City from './model/location/city';
-import State from './model/location/state';
+import User from './models/user';
+import Contact from './models/contact';
+import Employee from './models/employee';
+import City from './models/location/city';
+import State from './models/location/state';
 
 const host = process.env.DATABASE_HOST;
 const port = Number(process.env.DATABASE_PORT);

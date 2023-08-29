@@ -1,4 +1,4 @@
-import CrudController from "../../controller/crud";
+import CrudController from "../../controllers/crud";
 
 export default interface ICrudInjector {
     Inject() : CrudController;

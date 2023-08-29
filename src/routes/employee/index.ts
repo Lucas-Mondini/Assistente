@@ -1,5 +1,5 @@
 import CrudRouter from "../crud";
-import IEmployeeController from "../../controller/employee/interface";
+import IEmployeeController from "../../controllers/employee/interface";
 
 
 export default class EmployeeRouter extends CrudRouter {

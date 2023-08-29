@@ -1,7 +1,7 @@
 import { EntityTarget } from "typeorm/common/EntityTarget";
 import CrudRepository from "../_crud";
 import IEmployeeRepository from "./interface";
-import Employee from "../../model/employee";
+import Employee from "../../models/employee";
 import IContactRepository from "../contact/interface";
 
 

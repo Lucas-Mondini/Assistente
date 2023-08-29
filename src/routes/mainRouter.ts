@@ -1,5 +1,5 @@
 
-import Injector from '../injector';
+import Injector from '../injectors';
 import Express from 'express'
 import UserRouter from './user';
 import EmployeeRouter from './employee';

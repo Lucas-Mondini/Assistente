@@ -1,14 +1,14 @@
-// import UserController from "../controller/user";
-// import Student from "../model/user/student";
+// import UserController from "../controllers/user";
+// import Student from "../models/user/student";
 // import StudentRepository from "../repositories/students";
 // import UserService from "../services/user";
 
-import CrudController from "../controller/crud";
-import EmployeeController from "../controller/employee";
-import UserController from "../controller/user";
-import Contact from "../model/contact";
-import Employee from "../model/employee";
-import User from "../model/user";
+import CrudController from "../controllers/crud";
+import EmployeeController from "../controllers/employee";
+import UserController from "../controllers/user";
+import Contact from "../models/contact";
+import Employee from "../models/employee";
+import User from "../models/user";
 import ContactRepository from "../repositories/contact";
 import EmployeeRepository from "../repositories/employee";
 import UserRepository from "../repositories/user";

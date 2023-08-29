@@ -1,5 +1,5 @@
 import Express from 'express'
-import ICrudController from '../../controller/crud/interface';
+import ICrudController from '../../controllers/crud/interface';
 
 export default interface ICrudRouter {
     getRouter () : Express.Express;

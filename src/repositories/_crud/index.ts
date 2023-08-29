@@ -1,6 +1,6 @@
 import { EntityTarget } from 'typeorm';
 import { AppDataSource } from '../../data-source';
-import Model from '../../model';
+import Model from '../../models';
 import ICrudRepository from './interface'
 import Logger from '../../utils/logger';
 

@@ -1,6 +1,6 @@
 import Express from 'express'
 import StateRouter from './state';
-import Injector from '../../injector';
+import Injector from '../../injectors';
 import CityRouter from './city';
 
 const locationRouter = Express();

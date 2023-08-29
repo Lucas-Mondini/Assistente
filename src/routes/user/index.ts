@@ -1,5 +1,5 @@
 import CrudRouter from "../crud";
-import IUserController from "../../controller/user/interface";
+import IUserController from "../../controllers/user/interface";
 
 
 export default class UserRouter extends CrudRouter {

@@ -1,5 +1,5 @@
 import { EntityTarget } from "typeorm/common/EntityTarget";
-import State from "../../../model/location/state";
+import State from "../../../models/location/state";
 import CrudRepository from "../../_crud";
 import IStateRepository from "./interface";
 
