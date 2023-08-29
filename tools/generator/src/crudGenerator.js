@@ -63,9 +63,9 @@ export default class CrudGenerator {
         const compiledTemplate = ejs.compile(templateFile)
         const output = compiledTemplate(this.data)
 
-        let outpath = `${scriptPath}/out/${classname}/${this.targetOutDir}`
+        let outpath = `${this.targetProjectDir}/src/${classname}/${this.targetOutDir}`
         if(classname === "injectors") {
-            outpath = `${scriptPath}/out/${classname}/crud/${this.targetOutDir}`
+            outpath = `${this.targetProjectDir}/src/${classname}/crud/${this.targetOutDir}`
         }
 
         if(!fs.existsSync(outpath)) {
